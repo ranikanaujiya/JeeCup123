@@ -17,5 +17,10 @@ namespace JeeCup123.Controllers
         {
             return View();
         }
+
+        public ActionResult Servic()
+        {
+            return View();
+        }
     }
 }

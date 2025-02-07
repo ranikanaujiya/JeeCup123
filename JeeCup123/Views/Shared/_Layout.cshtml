@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        .font-page {
+            width: 100%;
+            height: 170px;
+            background-color: lightblue;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            padding: 20px;
+        }
+
+        .img {
+            width: 100px;
+            height: 100px;
+            margin: 15px 25px auto;
+        }
+
+        .img2 {
+            width: 95px;
+            height: 95px;
+            position: relative;
+            left: 1380px;
+            /* You might prefer using 'position' instead of margins here */
+            top: -150px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .a {
+            margin-top: -115px;
+        }
+
+        .b {
+            position: relative;
+            margin-top: -5px;
+        }
+
+        .cg {
+            margin: -10px;
+        }
+
+        .d {
+            margin: 20px;
+        }
+
+      
+        /* Footer Styling */
+        footer {
+            background-color: blue;
+            color: white;
+            padding: 40px 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Footer Content Layout */
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .footer-left, .footer-middle, .footer-right {
+            flex: 1;
+            margin: 10px;
+        }
+
+        /* Logo and Company Info */
+        .footer-logo {
+            width: 120px;
+            margin-bottom: 10px;
+        }
+
+        .company-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #bbb;
+        }
+
+        /* Footer Links */
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+            .footer-links li {
+                margin: 10px 0;
+            }
+
+            .footer-links a {
+                color: #fff;
+                text-decoration: none;
+            }
+
+                .footer-links a:hover {
+                    color: #007bff;
+                }
+
+        /* Social Media Icons */
+        .social-media-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icon {
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+            .social-icon:hover {
+                color: #007bff;
+            }
+
+        /* Footer Bottom (Copyright) */
+        .footer-bottom {
+            text-align: center;
+            padding: 10px;
+            background-color: #222;
+            margin-top: 30px;
+        }
+
+            .footer-bottom p {
+                margin: 0;
+                font-size: 14px;
+            }
+ 
+    </style>
+
+</head>
+<body>
+
+    <div class="font-page">
+        <img src="@Url.Content("~/Content/img/logo.png")" alt="Logo" class="img">
+        <div class="text-center">
+            <p class="a">संयुक्त प्रवेश परीक्षा (पॉलिटेक्निक), उत्तर प्रदेश</p>
+            <h2 class="b">Joint Entrance Examination Council</h2>
+            <h2 class="cg">(Polytechnic), Uttar Pradesh</h2>
+            <p class="d">Examination, Admission and eCounselling Services for Session 2025</p>
+        </div>
+        <img src="@Url.Content("~/Content/img/jee.png")" alt="JEE" class="img2">
+    </div>
+
+    <nav class="navbar navbar-expand-lg" style="background-color: blue; box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color:white;">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="color:white;">
+                <span class="navbar-toggler-icon" style="color:white;"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="color:white;">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" style="color:white;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" style="color:white;">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/Home/Registion" style="color:white;">Registion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" style="color:white;">Servic</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="color:white;">
+                    <button class="btn btn-outline-success" type="submit" style="color:white;">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    <footer>
+        <div class="footer-content" style=" box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;">
+            <!-- Footer Left: Logo and Company Info -->
+            <div class="footer-left">
+                <img src="~/Content/img/logo.png" alt="Company Logo" class="footer-logo">
+                <p class="company-name">Your Company</p>
+                <p class="description">Providing Quality Services Since 2025</p>
+            </div>
+
+            <!-- Footer Middle: Links -->
+            <div class="footer-middle">
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Footer Right: Social Media Icons -->
+            <div class="footer-right">
+                <div class="social-media-links">
+                    <a href="#" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+</html>

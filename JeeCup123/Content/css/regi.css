@@ -1,0 +1,86 @@
+﻿
+.form-container {
+    height: auto;
+    width: 80%; /* This makes the width responsive */
+    max-width: 1000px; /* Maximum width */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 100px auto;
+    padding: 20px;
+}
+
+.h1 {
+    text-align: center;
+    font-weight: bold;
+    color: blue;
+}
+
+.h12 {
+    font-weight: bold;
+    color: blue;
+    margin-top: 30px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Space between the inputs */
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+input[type="text"], select, input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.gender-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+    .gender-group input {
+        margin-right: 10px;
+    }
+
+button {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: darkblue;
+    }
+
+hr {
+    color: gray;
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background-color: gray;
+    margin-bottom: 20px;
+}
+
+.input {
+    position: relative;
+    width: 100px;
+}

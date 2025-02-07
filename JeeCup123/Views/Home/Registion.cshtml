@@ -1,0 +1,155 @@
+﻿
+@{
+    ViewBag.Title = "Registion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Content/js/regi.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<style>
+
+    .form-container {
+        height: auto;
+        width: 80%; /* This makes the width responsive */
+        max-width: 1000px; /* Maximum width */
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin: 100px auto;
+        padding: 20px;
+    }
+
+    .h1 {
+        text-align: center;
+        font-weight: bold;
+        color: blue;
+    }
+
+    .h12 {
+        font-weight: bold;
+        color: blue;
+        margin-top: 30px;
+    }
+
+    form {
+        margin-top: 20px;
+    }
+
+    .input-group {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px; /* Space between the inputs */
+    }
+
+    label {
+        font-size: 16px;
+        margin-bottom: 8px;
+        display: inline-block;
+    }
+
+    input[type="text"], select, input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .gender-group {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+        .gender-group input {
+            margin-right: 10px;
+        }
+
+    button {
+        padding: 10px 20px;
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+        button:hover {
+            background-color: darkblue;
+        }
+
+    hr {
+        color: gray;
+        width: 100%;
+        border: 0;
+        height: 1px;
+        background-color: gray;
+        margin-bottom: 20px;
+    }
+
+    .input {
+        position: relative;
+        width: 100px;
+    }
+
+
+
+</style>
+
+
+
+
+
+<div class="form-container">
+    <h2 class="h1">Registration Form</h2>
+    <hr>
+    <h2 class="h12">Personal Details</h2>
+    <hr>
+    <form>
+        <div class="input-group">
+            <div>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Candidate Name" class="input">
+            </div>
+            <div>
+                <label for="father-name">Father's Name:</label>
+                <input type="text" id="father" name="father-name" placeholder="Father's Name" class="input">
+            </div>
+        </div>
+
+        <div class="input-group">
+            <div>
+                <label for="mother-name">Mother's Name:</label>
+                <input type="text" id="mother" name="mother-name" placeholder="Mother's Name" class="input">
+            </div>
+            <div>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" class="input">
+            </div>
+        </div>
+
+
+        <div class="input-group">
+            <div>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" class="input">
+                    <option value="">Select</option>
+                    <option value="male" id="gender">Male</option>
+                    <option value="female" id="gender">Female</option>
+                    <option value="other" id="gender">Other</option>
+                </select>
+            </div>
+        </div>
+
+        <button type="button" onclick="SubmitFrom()">Submit</button>
+    </form>
+</div>
+
+
+
+

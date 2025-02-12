@@ -1,0 +1,48 @@
+﻿@model List<JeeCup123.Models.RegisterModel>
+@{
+    ViewBag.Title = "ShowData";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ShowData</h2>
+<div class="container-fluid">
+    <table class="table table-responsive" border="1">
+      <thead>
+          <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Father's Name</th>
+              <th>Mother's Name</th>
+              <th>Date of Birth</th>
+              <th>Gender</th>
+          </tr>
+      </thead>
+      <tbody>
+
+          @if (Model!= null)
+          {
+              foreach (var item in Model)
+              {
+          <tr>
+              <td>@item.id</td>
+              <td>@item.name</td>
+              <td>@item.father_name</td>
+              <td>@item.mother_name</td>
+              <td>@item.dob</td>
+              <td>@item.gender</td>
+          </tr>
+              }
+
+          }
+
+
+
+
+      </tbody>
+
+    </table>
+
+
+</div>
+
+

@@ -1,12 +1,14 @@
 ﻿function SubmitFrom() {
 
+   // debugger;
+    // get from data
     var name = $("#name").val();
     var father = $("#father").val();
     var mother = $("#mother").val();
     var dob = $("#dob").val();
     var gender = $("#gender").val();
 
-    debugger;
+   
     if (name == null || name == "") {
         Swal.fire({
             icon: "warning",
@@ -55,5 +57,20 @@
         });
         return;
     }
+
+    $.ajax({
+        url: '../Home/SaveRecord',
+        type: 'POST',
+        data: { Name: name, FatherName: father, MotherName: mother, DOB: dob, Gender: gender },
+        success: function (response)
+        {
+
+            alert(response.message)
+            window.location.href='home/ShowData'
+        }
+
+        // key:value
+
+    })
 
 }
